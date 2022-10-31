@@ -1,0 +1,44 @@
+<div class="row">
+  <h1 class="titulo">Experiencia Laboral</h1>
+  <div class="col-lg-1">
+    <button
+      type="button"
+      class="btn btn-success"
+      routerLink="/nuevaexp"
+      *ngIf="isLogged"
+    >
+      Agregar Experiencia    </button>
+  </div>
+  <div class="col-lg-11">
+    <br />
+    <div class="row d-flex justify-content-around">
+      <div class="card m-3" *ngFor="let Experiencia of expe">
+        <div class="card-body">
+          <h1 class="card-text">{{ Experiencia.nombreE }}</h1>
+          <h2 class="card-subtitle mb-2">
+            {{ Experiencia.tituloP }}
+          </h2>
+          <p class="card-text-1">Desde {{ Experiencia.periodoI | date: 'dd/MM/YYYY'}} hasta {{ Experiencia.periodoF | date: 'dd/MM/YYYY'}} </p>
+          <p class="card-text">{{ Experiencia.descripcionE }}</p>
+          <a *ngIf="isLogged"
+            ><button
+              class="btn btn-success"
+              routerLink="/editexp/{{ Experiencia.id }}"
+            >
+              <i
+                class="bi bi-pencil-square"
+                aria-placeholder="editar"
+              ></i></button
+          ></a>
+          <a *ngIf="isLogged"
+            ><button class="btn btn-danger" (click)="delete(Experiencia.id)">
+              <i class="bi bi-trash-fill"></i></button
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="pill">
+

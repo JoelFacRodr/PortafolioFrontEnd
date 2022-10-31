@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="row">
+        <div>
+            <div class="card m-3" >
+                <div class="card-body">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <br>
+                <div class="form-group">
+                    <label for="nombreE">Nombre del skill</label>
+                    <input type="text" class="form-control" id="nombreSkill" name="nombreSkill"[(ngModel)]="nombreSkill" required>
+                </div> 
+                <br>
+                <div class="form-group">
+                    <label for="descripcionE">Porcentaje</label>
+                    <input type="text" class="form-control" id="porcSkill" name="porcSkill"[(ngModel)]="porcSkill" required>
+                </div>
+                <br>
+                <div class="d-grid gap-2 d-md-flex justify-content-md">
+                    <button class="btn btn-success" >Actualizar</button>
+                    <button class="btn btn-danger" (click) = "cancelar()">Cancelar</button>
+                  </div>              
+            </form>
+        </div>
+    </div>
+</div>
+    </div>
+</div>

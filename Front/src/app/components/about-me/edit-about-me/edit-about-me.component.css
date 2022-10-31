@@ -1,0 +1,29 @@
+img{
+
+    width: 10%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 70px;
+    top: 350px;
+}
+
+  .spinner-message {
+    text-align: center;
+  }
+
+
+  .card{
+    width: 75rem;
+    box-shadow: 5px 5px #BFBFBF;
+    width: auto;
+    margin-top: 5rem;
+}
+
+.m-3{
+    margin: 4rem !important;
+}
+
+label{
+    font-weight: 550;
+    font-size: medium;
+}

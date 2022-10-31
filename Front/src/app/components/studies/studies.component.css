@@ -1,0 +1,47 @@
+.row{
+    padding: 20px;
+        width: auto; 
+        margin: auto auto;
+}
+div{
+    background-color: white;
+}
+a{
+    padding: 5px;
+}
+
+button{
+    box-shadow: 5px 5px #999999;
+}
+
+.card{
+    width: 47rem;
+    box-shadow: 5px 5px #BFBFBF;
+}
+
+.pill {
+    height:0px;
+    border-radius: 5px;
+    color: #9462EB;
+    border: 5px solid currentColor;
+    width: 100%;
+    
+  }
+
+  .titulo {
+    display: inline;
+    font-size: 2rem;
+   }
+   
+   h2{
+       font-size: 1.3rem;
+   }
+   
+   h1{
+       font-size: 1.7rem;
+   }
+   
+   .card-text-1{
+       font-weight: 500;
+   }
+   

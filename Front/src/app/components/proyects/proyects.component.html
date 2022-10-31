@@ -1,0 +1,38 @@
+<div class="row">
+    <h1 class="titulo">Proyectos</h1>
+    <div class="col-lg-1">
+        <button type="button" class="btn btn-success" routerLink="nuevopro" *ngIf="isLogged">Agregar Proyecto</button>
+    </div>
+<div class="col-lg-11">
+  <br/>
+  <div class="row d-flex justify-content-around">
+    <div class="card m-3" *ngFor="let Proyecto of proyecto">
+      <div class="card-body">
+        <h1 class="card-title">{{Proyecto.nombreP}}</h1>
+          <br>
+        <a class="card-text-2" href="{{Proyecto.link}}" target="_blank">
+        {{Proyecto.link}}
+        </a>
+        <br>
+        <p class="card-text-1">Desde {{Proyecto.periodoI | date: 'dd/MM/YYYY' }} hasta {{Proyecto.periodoF | date: 'dd/MM/YYYY'}} </p>
+        <p class="card-text">{{Proyecto.descriptionP}}</p>
+        <a *ngIf="isLogged"
+          ><button
+            class="btn btn-success"
+            routerLink="/editpro/{{Proyecto.id}}"
+          >
+            <i
+              class="bi bi-pencil-square"
+              aria-placeholder="editar"
+            ></i></button
+        ></a>
+        <a *ngIf="isLogged"
+          ><button class="btn btn-danger" (click)="delete(Proyecto.id)">
+            <i class="bi bi-trash-fill"></i></button
+        ></a>
+      </div>
+    </div>
+  </div>
+</div>
+  
+</div>

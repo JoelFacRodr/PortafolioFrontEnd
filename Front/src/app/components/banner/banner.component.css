@@ -1,0 +1,18 @@
+img{
+    width: 75%;
+    height: 320px;
+    align-content: center ;
+    display:block;
+    margin:auto;    
+}
+
+.banner{
+ background-color: #999999 ;
+}
+#titulo {
+    position: absolute;
+    left: 1822px;
+    top: 91px;
+  }
+
+  

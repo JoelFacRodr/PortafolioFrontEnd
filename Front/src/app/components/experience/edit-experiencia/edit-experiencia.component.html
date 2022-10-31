@@ -1,0 +1,43 @@
+
+<div class="container" *ngIf="expLab">
+    <div class="row">
+        <div>
+            <div class="card m-3" >
+                <div class="card-body">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <br>
+                <div class="form-group">
+                    <label for="nombreE">Nombre de la Empresa</label>
+                    <input type="text" class="form-control" id="nombreE" name="nombreE"[(ngModel)]="expLab.nombreE" required>
+                </div> 
+                <br>
+                <div class="form-group">
+                    <label for="tituloE">Titulo</label>
+                    <input type="text" class="form-control" id="tituloP" name="tituloP"[(ngModel)]="expLab.tituloP" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="descripcionE">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcionE" name="descripcionE"[(ngModel)]="expLab.descripcionE" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="periodoI">Fecha Inicio</label>
+                    <input type="date" class="form-control" id="periodoI" name="periodoI"[(ngModel)]="expLab.periodoI" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="periodoF">Fecha Finalizacion</label>
+                    <input type="date" class="form-control" id="periodoF" name="periodoF"[(ngModel)]="expLab.periodoF"  min="{{expLab.periodoI}}" required>
+                </div>
+                <br>
+                <div class="d-grid gap-2 d-md-flex justify-content-md">
+                    <button class="btn btn-success" >Actualizar</button>
+                    <button class="btn btn-danger" (click) = "cancelar()" >Cancelar</button>
+                  </div>                  
+            </form>
+        </div>
+    </div>
+</div>
+    </div>
+</div>

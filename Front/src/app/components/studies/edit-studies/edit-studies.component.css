@@ -1,0 +1,15 @@
+.card{
+    width: 75rem;
+    box-shadow: 5px 5px #BFBFBF;
+    width: auto;
+    margin-top: 5rem;
+}
+
+.m-3{
+    margin: 4rem !important;
+}
+
+label{
+    font-weight: 550;
+    font-size: medium;
+}

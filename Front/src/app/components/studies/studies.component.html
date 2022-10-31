@@ -1,0 +1,35 @@
+<div class="row">
+    <h1 class="titulo">Educación</h1>
+    <div class="col-lg-1">
+        <button type="button" class="btn btn-success" routerLink="nuevaedu" *ngIf="isLogged">Agregar Estudio</button>
+    </div>
+        <div class="col-lg-11">
+            <br />
+            <div class="row d-flex justify-content-around">
+              <div class="card m-3" *ngFor="let Educacion of educacion">
+                <div class="card-body">
+                  <h1 class="card-title">{{Educacion.nombreE}}</h1>
+                  <h2 class="card-subtitle mb-2">
+                    {{Educacion.descripcionE}}
+                  </h2>
+                  <p class="card-text-1">Desde {{Educacion.periodoI | date: 'dd/MM/YYYY'}} hasta {{Educacion.periodoF | date: 'dd/MM/YYYY'}} </p>
+                  <a *ngIf="isLogged"
+                    ><button
+                      class="btn btn-success"
+                      routerLink="/editedu/{{Educacion.id}}"
+                    >
+                      <i
+                        class="bi bi-pencil-square"
+                        aria-placeholder="editar"
+                      ></i></button
+                  ></a>
+                  <a *ngIf="isLogged"
+                    ><button class="btn btn-danger" (click)="delete(Educacion.id)">
+                      <i class="bi bi-trash-fill"></i></button
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>  
+</div>
+<hr class="pill">

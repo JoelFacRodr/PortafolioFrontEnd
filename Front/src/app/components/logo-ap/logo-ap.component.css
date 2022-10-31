@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.row{
+    --bs-gutter-x: 0rem;
+}
+
+.redes{
+    margin-right: 0.5em;
+}
+
+#logoAP{
+    width: 150px;
+}
+img{
+    width: 40px;
+}
+
+.ingreso{
+    border-width: light;
+}
+

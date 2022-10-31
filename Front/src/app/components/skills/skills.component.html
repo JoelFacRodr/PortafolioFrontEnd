@@ -1,0 +1,47 @@
+<div class="row">
+  <h1 class="titulo"> Hard & soft Skills</h1>
+  <div class="col-lg-1">
+    <button type="button" class="btn btn-success" routerLink="/nuevaskill" *ngIf="isLogged">Agregar Habilidad</button>
+</div>
+
+   <div class="col-lg-11">
+    <br />
+    <div class="row d-flex justify-content-around">
+      <div class="card m-3" *ngFor="let skill of skill">
+        <div class="card-body">
+            <circle-progress
+            [percent]="skill.porcSkill"
+            [radius]="100"
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [title]= "skill.nombreSkill"
+            [titleColor]="'#2F2D30'"
+            [titleFontSize]="'2em'"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#9462EB'"
+            [innerStrokeColor]="'#9462EB'"
+            [animation]="true"
+            [animationDuration]="1000"
+            >
+        </circle-progress>
+          <a *ngIf="isLogged"
+            ><button
+              class="btn btn-success"
+              routerLink="/skillEdit/{{skill.id}}"
+            >
+              <i
+                class="bi bi-pencil-square"
+                aria-placeholder="editar"
+              ></i></button
+          ></a>
+          <a *ngIf="isLogged"
+            ><button class="btn btn-danger" (click)="delete(skill.id)">
+              <i class="bi bi-trash-fill"></i></button
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="pill">

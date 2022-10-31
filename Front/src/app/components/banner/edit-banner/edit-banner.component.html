@@ -1,0 +1,23 @@
+
+<div class="container" *ngIf="banner">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">            
+                <div class="form-group">
+                    <label for="img">imagen</label>
+                    <input type="file" class="form-control" id="img" name="img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png" (click)="loadData()">
+                </div>
+                <div class="imagen">
+                    <img [src]="imagenbannerService.url" width="200px">
+                </div>
+                <br>
+                <mat-spinner *ngIf="showSpinner"></mat-spinner>
+                <br>
+                <div class="d-grid gap-2 d-md-flex">
+                    <button class="btn btn-success me-md-2" >Actualizar Perfil</button>
+                    <button class="btn btn-danger" >cancelar</button>
+                </div>                  
+            </form>
+        </div>
+    </div>
+</div> 

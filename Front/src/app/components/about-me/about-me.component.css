@@ -1,0 +1,97 @@
+.row{
+    padding: 20px;
+    --bs-gutter-x: 0rem;
+    
+}
+div{
+    background-color: white;
+    text-align: center;
+}
+
+.name{
+    font-weight: bold;
+    margin-top: 30%;
+    margin-bottom: 1%;
+}
+
+.full{
+    margin-top: 1%;
+}
+
+@media (min-width: 576px){
+    #profilePicture{
+        position: absolute;
+        width: 10%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 70px;
+        top: 345px;
+    }
+}
+
+@media (max-width: 575px){
+    #profilePicture{
+        position: absolute;
+        width: 30%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 35%;
+        top: 350px;
+    }
+}
+
+#info {
+    position: absolute;
+    left: 1568px;
+    top: 412px
+  }
+
+#titulo {
+    position: absolute;
+    left: 200px;
+    top: 515px;
+  }
+
+  hr {
+    border: 0;
+    margin: 1.35em auto;
+    max-width: 100%;
+    background-position: 50%;
+    box-sizing: border-box;
+  }
+  .pill {
+    height:0px;
+    border-radius: 5px;
+    color: #9462EB;
+    border: 5px solid currentColor;
+    width: 100%;
+    
+  }
+
+  .titulo {
+    display: inline;
+    font-size: 2rem;
+   }
+   
+   h2{
+       font-size: 1.3rem;
+   }
+   
+   h1{
+       font-size: 1.7rem;
+       font-weight: 500;
+   }
+   
+   .card-text-1{
+       font-weight: 500;
+   }
+
+   .mi{
+    font-size: 1rem;
+    line-height : 30px;
+   }
+    
+.img-fluid{
+    width: 200px;
+    height: 205px;
+}
